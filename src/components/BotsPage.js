@@ -2,15 +2,20 @@ import React from "react";
 import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
 
-function BotsPage() {
-  //start here with your code for step one
-
+function BotsPage({ bots, yourBotArmy, enlistBot, removeBot, dischargeBot }) {
   return (
     <div>
-      <YourBotArmy />
-      <BotCollection />
+      <YourBotArmy
+        bots={yourBotArmy}
+        removeBot={removeBot}
+      />
+      <BotCollection
+        bots={bots}
+        enlistBot={enlistBot}
+        dischargeBot={dischargeBot}
+      />
     </div>
-  )
+  );
 }
 
 export default BotsPage;
