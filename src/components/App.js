@@ -7,7 +7,7 @@ function App() {
 
   // Fetch bots data
   useEffect(() => {
-    fetch("http://localhost:8001/bots")
+    fetch("http://localhost:8002/bots")
       .then((response) => response.json())
       .then((data) => setBots(data));
   }, []);
